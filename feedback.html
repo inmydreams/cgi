@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Feedback Form</title>
+    <style>
+        body {
+            background-color: #E6E3BB;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 20px;
+        }
+        
+        #content {
+            margin: 20px auto;
+            width: 600px;
+            background-color: #FDFFE3;
+            padding: 20px 10px;
+            border: solid 3px black;
+        }
+        
+        h1 {
+            font-size: 120%;
+        }
+        
+        input[type=text], textarea {
+            width: 400px;
+        }
+        
+        tr.label {
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="content">
+    <h1> Feedback Form </h1>
+    <form method="post" action="/test.cgi">
+    <table>
+        <tr>
+            <td class="label">Your name</td>
+            <td class="form"><input name="Name" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td class="label">Email address</td>
+            <td class="form"><input name="Email" type="text" /></td>
+        </tr>
+
+        <tr class="label">
+            <td class="label">Are you ... </td>
+            <td class="form">
+                Developer <input type="radio" name="Occupation" value="Developer" 
+                  checked="checked" /> &nbsp;
+                System admin <input type="radio" name="Occupation" value="System Admin" 
+                  /><br />
+                Enthusiast <input type="radio" name="Level" value="Enthusiast" checked="checked" /> &nbsp;
+                Professional <input type="radio" name="Level"  value="Professional"
+                  /> &nbsp;
+                Hobbyist <input type="radio" name="Level" value="Hobbyist" /> &nbsp;
+                Experienced? <input type="radio" name="Level" value="Experienced" />
+            </td>
+        </tr>
+
+        <tr valign="top">
+            <td class="label">Comments</td>
+            <td class="form">
+                <textarea cols="30" rows="5" name="message" class="default"
+                  ></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td height="20"></td>
+        </tr>
+  
+        <tr>
+            <td></td>
+            <td><input type="submit" name="submit" value=" Send " /></td>
+        </tr>
+
+    </table>
+    </form>
+</div>
+
+</body>
+</html>
